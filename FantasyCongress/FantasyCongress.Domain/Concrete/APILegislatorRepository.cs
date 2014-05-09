@@ -15,10 +15,22 @@ namespace FantasyCongress.Domain.Concrete
 
         private string apikey = "ac12522a36d24a4288cacdb972dc64f2";
 
+        public IEnumerable<Legislator> Legislators { 
+            get
+            {
+                WebClient client = new WebClient();
+                string url = String.Format("http://congress.api.sunlightfoundation.com/legislators?per_page=all&apikey={0}", apikey);
+                string resultJson = client.DownloadString(url);
+
+                Wrapper<Legislator> result = JsonConvert.DeserializeObject<Wrapper<Legislator>>(resultJson);
+
+                return result.Results;
+            }
+        }
+
         public Legislator GetLegislator(string bioguideId) { 
         
             WebClient client = new WebClient();
-            //client.
             string url = String.Format("http://congress.api.sunlightfoundation.com/legislators?bioguide_id={0}&apikey={1}", bioguideId, apikey);
             string resultJson = client.DownloadString(url);
 

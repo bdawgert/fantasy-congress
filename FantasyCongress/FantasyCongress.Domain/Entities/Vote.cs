@@ -24,7 +24,7 @@ namespace FantasyCongress.Domain.Entities
         public string Source { get; set; }
 
         public string BillId { get; set; }
-        public BillBrief Bill { get; set; }
+        //public BillSummary Bill { get; set; }
 
         [JsonProperty("nomination_id")]
         public string NominationId { get; set; }
@@ -32,6 +32,8 @@ namespace FantasyCongress.Domain.Entities
 
         [JsonProperty("voter_ids")]
         public Dictionary<string, string> VoterIds { get; set; }
-        public Dictionary<string, > Voters { get; set; }
+        public Dictionary<string, Voter> Voters { get; set; }
+
+        public VoteBreakdown Breakdown { get; set; }
     }
 }

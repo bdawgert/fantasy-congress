@@ -20,24 +20,24 @@ namespace FantasyCongress.Domain.Entities
         public DateTime IntroducedOn { get; set; }
         [JsonProperty("last_action_at")]
         public DateTime LastActionAt { get; set; }
-    
+
         [JsonProperty("amends_amendment_id")]
         public int? AmendsAmendmentId { get; set; }
-        [JsonProperty("amends_amendment")]
-        public AmendmentBrief { get; set; }
+        //[JsonProperty("amends_amendment")]
+        //public AmendmentSummary { get; set; }
 
-        [JsonProperty("amends_bill_id")]
-        public string AmendsBillId { get; set; }
-    
-        [JsonProperty("amends_bill")]
-        public BillBrief { get; set; }
-        [JsonProperty("sponsor_type")]
-        public string SponsorType { get; set; }
-        [JsonProperty("sponsor_id")]
-        public string SponsorId { get; set; }
-        public PersonBrief Sponsor { get; set; }
+        //[JsonProperty("amends_bill_id")]
+        //public string AmendsBillId { get; set; }
+
+        //[JsonProperty("amends_bill")]
+        //public BillSummary { get; set; }
+        //[JsonProperty("sponsor_type")]
+        //public string SponsorType { get; set; }
+        //[JsonProperty("sponsor_id")]
+        //public string SponsorId { get; set; }
+        public Legislator Sponsor { get; set; }
 
         public string Purpose { get; set; }
         public string Description { get; set; }
-
+    }
 }

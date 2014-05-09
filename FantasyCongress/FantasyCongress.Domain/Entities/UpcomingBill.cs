@@ -8,10 +8,10 @@ namespace FantasyCongress.Domain.Entities
     {
         [JsonProperty("bill_id")]
         public int BillId { get; set; }
-        
+
         [JsonProperty("scheduled_at")]
         public DateTime ScheduledAt { get; set; }
 
-        public BillBrief Bill { get; set; }
-
+        //public BillSummary Bill { get; set; }
+    }
 }

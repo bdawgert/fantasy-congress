@@ -17,7 +17,7 @@ namespace FantasyCongress.Domain.Entities
         [JsonProperty("roll_id")]
         public string RollId { get; set; }
         public string Text { get; set; }
-        public IEnumerable<Reference> References { get; set; }
+        //public IEnumerable<Reference> References { get; set; }
 
     }
 }

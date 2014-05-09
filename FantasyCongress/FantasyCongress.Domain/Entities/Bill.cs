@@ -57,14 +57,14 @@ namespace FantasyCongress.Domain.Entities
 
         public IEnumerable<Action> Actions { get; set; }
         public IEnumerable<Action> Votes { get; set; }
-        public IEnumerable<BillSponsorship> Sponsorships { get; set; }
+        //public IEnumerable<BillSponsorship> Sponsorships { get; set; }
         public IEnumerable<Committee> Committees { get; set; }
-        public IEnumerable<BillVersion> Versions { get; set; }
-        [JsonProperty("last_version")]
-        public BillVersion LastVersion { get; set; }
+        //public IEnumerable<BillVersion> Versions { get; set; }
+        //[JsonProperty("last_version")]
+        //public BillVersion LastVersion { get; set; }
         [JsonProperty("upcoming")]
         public IEnumerable<UpcomingDebate> UpcomingDebate { get; set; }
-        [JsonProperty("enacted_as")]
-        public EnactedLaw EnactedAs { get; set; }
+        //[JsonProperty("enacted_as")]
+        //public EnactedLaw EnactedAs { get; set; }
     }
 }

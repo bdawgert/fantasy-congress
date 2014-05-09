@@ -12,8 +12,8 @@ namespace FantasyCongress.Domain
         [JsonProperty("count")]
         public int Count { get; set; }
         [JsonProperty("per_page")]
-        public int PerPage { get; set; }
+        public int? PerPage { get; set; }
         [JsonProperty("page")]
-        public int PageNumber { get; set; }
+        public int? PageNumber { get; set; }
     }
 }

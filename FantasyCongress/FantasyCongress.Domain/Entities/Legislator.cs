@@ -1,8 +1,5 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using Newtonsoft.Json;
 
 namespace FantasyCongress.Domain.Entities
@@ -63,6 +60,8 @@ namespace FantasyCongress.Domain.Entities
         public DateTime TermEnd { get; set; }
         [JsonProperty("term_start")]
         public DateTime TermStart { get; set; }
+
+        public IEnumerable<Term> Terms { get; set; }
 
         [JsonProperty("facebook_id")]
         public string FacebookId { get; set; }
